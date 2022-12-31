@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');
 
-/* font-family: 'Ubuntu', sans-serif; */
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +10,6 @@ html{
 }
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* background: rgb(127, 127, 197); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,7 +41,6 @@ nav {
     width: 100%;
     position: fixed;
     z-index: 1;
-    /* font-family: 'Ubuntu', sans-serif; */
 }
 
 label.logo {
@@ -61,8 +58,6 @@ label.logo span {
 nav ul {
     float: right;
     margin-right: 0px;
-    /* display: flex;
-    flex-wrap: wrap; */
     list-style: none;
 }
 
@@ -70,7 +65,6 @@ nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 60px;
-    /* margin: 0 5px; */
 }
 
 nav ul li a {
@@ -112,7 +106,6 @@ a:hover {
     height: 100vh;
     color: white;
     min-height: 500px;
-    /* display: flex; */
 }
 
 .home-content {
@@ -352,6 +345,7 @@ a:hover {
     margin-bottom: 10px;
     font-size: 22px;
     font-weight: 600;
+    color: red;
 }
 .contact-content p{
     margin-bottom: 32px;
@@ -387,6 +381,7 @@ a:hover {
     margin-bottom: 10px;
     font-size: 22px;
     font-weight: 600;
+    color: red;
 }
 input{
     padding: 10px 10px 10px 10px;
@@ -425,9 +420,133 @@ textarea{
 }
 .field-name{
     margin: 0px 15px 15px 0px;
+    position: relative;
+}
+.field-name input{
+    width: 100%;
+    padding: 10px;
+    background: none;
+    color: white;
+    position: relative;
+    border: 2px solid white;
+    outline: none;
+    /* z-index: 1; */
+}
+.field-name input:focus + label{
+    color: white;
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+    top: -12px;
+    background-color: #2c3e50;
+    /* position: relative; */
+    /* border: none; */
+}
+.field-name label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    transition: 1s;
+    z-index: 999;
+}
+.field-name input:focus + label:after{
+    content: ":";
+    z-index: 999;
 }
 .field-subject{
     margin: 0px 0px 15px 0px;
+    position: relative;
+}
+.field-subject input{
+    width: 100%;
+    padding: 10px;
+    background: none;
+    color: white;
+    /* position: absolute; */
+    border: 2px solid white;
+    outline: none;
+}
+.field-subject input:focus + label{
+    color: white;
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+    top: -12px;
+    background-color: #2c3e50;
+    /* position: relative; */
+    /* border: none; */
+}
+.field-subject label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    transition: 1s;
+    background: none;
+}
+.field-subject input:focus + label:after{
+    content: ":";
+}
+.field-email{
+    position: relative;
+}
+.field-email input{
+    width: 100%;
+    padding: 10px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+}
+.field-email input:focus + label{
+    color: white;
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+    top: -12px;
+    background-color: #2c3e50;
+    /* position: relative; */
+    /* border: none; */
+}
+.field-email label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    transition: 1s;
+    background: none;
+}
+.field-email input:focus + label:after{
+    content: ":";
+}
+.field-textarea{
+    position: relative;
+}
+.field-textarea textarea{
+    width: 100%;
+    padding: 10px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+}
+.field-textarea textarea:focus + label{
+    color: white;
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+    top: -12px;
+    background-color: #2c3e50;
+    /* position: relative; */
+    /* border: none; */
+}
+.field-textarea label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    transition: 1s;
+    background: none;
+}
+.field-textarea textarea:focus + label:after{
+    content: ":";
 }
 .footer{
     height: 100px;
@@ -493,18 +612,6 @@ textarea{
     justify-content: center;
     display: flex;
 }
-/* @media(max-width: 414px){
-    .home{
-        height: 748px;
-    }
-    .skills{
-        
-        margin-bottom: -127px;
-    }
-    .about{
-        margin-bottom: -70px;
-    }
-} */
 @media(max-width: 1263px) {
     .home {
         flex-direction: column;
@@ -613,11 +720,9 @@ textarea{
     nav ul {
         position: fixed;
         width: 100%;
-        /* height: 100vh; */
         background: #1c2631;
         margin-top: 75px;
         top: 0px;
-        /* top: -180%; */
         left: -100%;
         transition: all .8s;
         text-align: center;
@@ -642,6 +747,3 @@ textarea{
     }
 }
 
-/* @media(max-width: 864px){
-   
-} */

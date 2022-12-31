@@ -4,7 +4,8 @@
   "description": "This Website contain my personal information.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,6 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   }
 }
