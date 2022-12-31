@@ -20,13 +20,13 @@ app.use('/static', express.static('static')); // For serving static files
 app.use(express.urlencoded())
 
 // HTML SPECIFIC STUFF
-app.set('view engine', 'html'); // Set the tamplet engine as html
+app.set('view engine', 'html'); // Set the tamplet engine as pug
 app.set('views', path.join(__dirname, 'views')); // Set the views directory
 
 // ENDPOINS
 app.get('/', (req, res) => {
     const params = {}
-    res.sendFile(__dirname + '/views/index.html');
+    res.sendFile(__dirname + '/index.html');
 })
 
 
